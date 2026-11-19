@@ -1,0 +1,1 @@
+package com.jobmatcher.dto;import java.util.List;public record MatchRequest(List<String> skills,String qualification,Double experience){}

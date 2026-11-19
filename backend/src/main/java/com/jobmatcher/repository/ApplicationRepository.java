@@ -1,0 +1,1 @@
+package com.jobmatcher.repository;import com.jobmatcher.model.JobApplication;import org.springframework.data.jpa.repository.JpaRepository;import java.util.List;public interface ApplicationRepository extends JpaRepository<JobApplication,Long>{List<JobApplication> findByUserIdOrderByAppliedAtDesc(Long userId);boolean existsByUserIdAndJobId(Long userId,Long jobId);}

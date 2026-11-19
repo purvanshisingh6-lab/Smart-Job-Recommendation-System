@@ -1,0 +1,1 @@
+package com.jobmatcher.dto;import jakarta.validation.constraints.*;import java.util.Set;public record ProfileRequest(@NotBlank @Size(max=100) String name,@NotBlank @Email String email,@NotBlank String qualification,@DecimalMin("0.0") @DecimalMax("40.0") double experience,Set<String> skills){}

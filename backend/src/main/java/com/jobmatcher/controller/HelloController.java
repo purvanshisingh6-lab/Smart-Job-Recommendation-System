@@ -1,0 +1,1 @@
+package com.jobmatcher.controller;import org.springframework.web.bind.annotation.*;@RestController @RequestMapping("/api") public class HelloController {@GetMapping("/hello") public java.util.Map<String,String> hello(){return java.util.Map.of("message","Hello from Java backend!","status","UP");}}

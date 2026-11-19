@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="SmartHire - Smart Job Recommendation and Skill Matching System">
+<title>Browse Jobs | SmartHire</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body data-page="jobs">
+<a class="visually-hidden-focusable" href="#main">Skip to content</a>
+<div id="nav"></div>
+<main id="main">
+
+<div class="container py-5">
+  <h1 class="fw-bold mb-1">Browse jobs</h1>
+  <p class="text-muted mb-4">Scores are calculated from your saved skills.</p>
+  <div class="row g-3 align-items-center mb-3">
+    <div class="col-lg-6"><label for="search" class="visually-hidden">Search jobs</label>
+      <div class="input-group"><span class="input-group-text bg-white"><i class="bi bi-search"></i></span><input id="search" class="form-control" placeholder="Search by title or company" autocomplete="off"></div></div>
+    <div class="col-lg-6 d-flex flex-wrap gap-2" id="chips" role="group" aria-label="Filter jobs">
+      <button class="chip active" data-f="all">All Jobs</button>
+      <button class="chip" data-f="best">Best Match (70%+)</button>
+      <button class="chip" data-f="medium">Medium Match (40%+)</button>
+    </div>
+  </div>
+  <p class="text-muted" id="count" aria-live="polite"></p>
+  <div class="row g-4" id="jobGrid"></div>
+</div>
+
+</main>
+<footer id="foot"></footer>
+<div class="toast-container position-fixed bottom-0 end-0 p-3" id="toasts" aria-live="polite"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/matching.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+package com.jobmatcher.controller;import com.jobmatcher.dto.MatchRequest;import com.jobmatcher.service.JobService;import org.springframework.web.bind.annotation.*;import java.util.*;
+@RestController @RequestMapping("/api") public class JobController {private final JobService jobs;public JobController(JobService j){jobs=j;}@GetMapping("/jobs") public List<JobService.Job> jobs(){return jobs.all();}@PostMapping("/match") public List<JobService.Match> match(@RequestBody MatchRequest r){return jobs.match(r.skills());}}
